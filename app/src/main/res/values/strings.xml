@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">JXcoreSample</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="first">First Name</string>
+    <string name="last">Last Name</string>
+    <string name="activate_js">Activate JS</string>
+</resources>
