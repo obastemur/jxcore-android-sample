@@ -29,32 +29,25 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
     public class RunJavaScriptAsync extends AsyncTask<String, Void, String> {
 
         @Override
         protected String doInBackground(String... params) {
+
+            /**
+             * Hi Oguz!
+             * What I'd like to show here is how you start the engine in this method.
+             * Then you call the "writeMyName()" JS method and return the result (String).
+             *
+             * This is a different thread then the UI thread so imagine one can perform heavy
+             * network/db tasks in his JS Code.
+             *
+             * Also please consider a case where the engine is already started (the button remains
+             * enabled at all times) and you just want to invoke the JS method.
+             *
+             * Thanks,
+             * Ori
+             */
 
             EditText firstNameInput = (EditText)findViewById(R.id.editText1);
             EditText lastNameInput = (EditText)findViewById(R.id.editText2);
@@ -64,6 +57,7 @@ public class MainActivity extends ActionBarActivity {
         @Override
         protected void onPostExecute(String result) {
 
+            //This displays the result on the screen (done on the UI thread)
             TextView jsResult = (TextView)findViewById(R.id.result);
             jsResult.setText(result);
 
