@@ -1,7 +1,30 @@
-.gradle
-/local.properties
-/.idea
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.DS_Store
+obj/
 .idea/
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+*.apk
+*.so
+*.setup
+
+.gradle
+/jxcore-droid-astd/local.properties
+/jxcore-droid-astd/.idea/workspace.xml
+/jxcore-droid-astd/.idea/libraries
 .DS_Store
-/build
-/captures
+/jxcore-droid-astd/build
+
+bin/
+gen/
+*.cache
